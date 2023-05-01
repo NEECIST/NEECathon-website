@@ -88,8 +88,6 @@ Para alem deste passo é necessário também configurar o Apache, apontando as c
 Esta configuração é feita através do ficheiro que se encontra no servidor do NEEC em `/etc/apache2/sites-available/` após a configuração colocar o site a correr com o comando ``` a2ensite NOME_DO_FICHEIRO_DO_SITE``` e de seguida entrar na pasta build do site e correr o comando `serve`. 
 
 
-### Creating A Pull Request
-
 
 
 ## Authors
