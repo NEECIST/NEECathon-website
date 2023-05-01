@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+<br/>
+<p align="center">
+  <a href="https://github.com/NEECIST/NEECathon-website">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">NEECathon 2021 - Monopoly</h3>
 
-## Available Scripts
+  <p align="center">
+    💰 Own it all! 💰
+    <br/>
+    <br/>
+  </p>
+</p>
 
-In the project directory, you can run:
+![Downloads](https://img.shields.io/github/downloads/NEECIST/NEECathon-website/total) ![Contributors](https://img.shields.io/github/contributors/NEECIST/NEECathon-website?color=dark-green) ![Issues](https://img.shields.io/github/issues/NEECIST/NEECathon-website) ![License](https://img.shields.io/github/license/NEECIST/NEECathon-website) 
 
-### `npm start`
+## Table Of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* [About the Project](#about-the-project)
+* [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Authors](#authors)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## About The Project
 
-### `npm test`
+![Screen Shot](images/screenshot.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Este repositório contem todo o código de front-end utilizado na NEECathon no ano de 2021. 
 
-### `npm run build`
+O sub-tema da competição neste ano era o jogo do Monopólio, tendo por isso um tabuleiro feito a medida da competição, repleto de componentes eletrónicos em vez das clássicas ruas e avenidas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Além de servir como tabuleiro de jogo, este website contêm tambem a nossa loja digital com todos os componentes que as várias equipas podiam comprar e usar nos seus projectos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Built With
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* [React.JS v17.0.2](https://react.dev/)
+* [react-bootstrap](https://react-bootstrap.github.io/)
+* [Supabase (v1)](https://supabase.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Getting Started
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Coisas a fazer para por o site a correr!
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* npm
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npm install npm@latest -g
+```
 
-### Code Splitting
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clonar o repositório
 
-### Analyzing the Bundle Size
+```sh
+git clone https://github.com/your_username_/Project-Name.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Install NPM packages
 
-### Making a Progressive Web App
+```sh
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Alterar as configurações da base de dados do supabase `supabaseClient.js`
 
-### Advanced Configuration
+```JS
+const supabaseUrl = SUPABSE_URL;
+const supabaseSecretKey = SUPABASE_PUBLIC_KEY;
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Usage
 
-### Deployment
+Para dar deploy seguir os passos da [`Installation`](#installation), procedendo de seguida ao build do site através do comando:
+```sh
+npm build
+```
+Para alem deste passo é necessário também configurar o Apache, apontando as configurações para o link do localhost, com a porta correta.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Esta configuração é feita através do ficheiro que se encontra no servidor do NEEC em `/etc/apache2/sites-available/` após a configuração colocar o site a correr com o comando ``` a2ensite NOME_DO_FICHEIRO_DO_SITE``` e de seguida entrar na pasta build do site e correr o comando `serve`. 
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Creating A Pull Request
+
+
+
+## Authors
+
+* **Vasco Rodrigues** - *Coordenador de Equipa* - [Vasco Rodrigues](https://github.com/VascoDVRodrigues) - *Desenvolvimento de Routes, CSS e funcionalidades*
+* **Gonçalo Midões** - *Colaborador* - [Gonçalo Midões](Midas-sudo) - *Desenvolvimento de CSS e funcionalidades*
+* **André Silva** - *Colaborador* - [André Silva](https://github.com/Andreps18) - *Desenvolvimento de funcionalidades*
+* **André Pereira** - *Colaborador* - [André Pereira](https://github.com/Andre-MR-Pereira) - *Desenvolvimento de funcionalidades*
+* **Gonçalo Coelho** - *Colaborador* - [Gonçalo Coelho](https://github.com/goncoelho) - *Desenvolvimento de funcionalidades*
+
